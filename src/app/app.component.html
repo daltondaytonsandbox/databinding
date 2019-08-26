@@ -1,4 +1,5 @@
 <div class="container">
+    <!-- Event Listeners. Cockpit is using '@Output' and '.emit' -->
     <app-cockpit
         (serverCreated)="onServerAdded($event)"
         (blueprintCreated)="onBlueprintAdded($event)"
@@ -6,6 +7,8 @@
     <hr />
     <div class="row">
         <div class="col-xs-12">
+            <!-- '[element]' Binding to customer properties.  -->
+            <!-- server-element.ts is using '@Input' to bind [element] -->
             <app-server-element
                 *ngFor="let serverElement of serverElements"
                 [element]="serverElement"
