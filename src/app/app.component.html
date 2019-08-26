@@ -7,12 +7,22 @@
     <hr />
     <div class="row">
         <div class="col-xs-12">
+            <button class="btn btn-primary" (click)="onChangeFirst()">
+                Change First Element
+            </button>
+
+            <button class="btn btn-danger" (click)="onDestroyFirst()">
+                Destroy first component
+            </button>
+
             <!-- '[element]' Binding to customer properties.  -->
             <!-- server-element.ts is using '@Input' to bind [element] -->
             <app-server-element
                 *ngFor="let serverElement of serverElements"
-                [element]="serverElement"
+                [name]="serverElement.name"
             >
+                <!-- [element]="serverElement" removed, [name]="serverElement.name" added -->
+
                 <!-- This is passed into the server-element component using <ng-content> in the server-element component -->
                 <p>
                     <strong
