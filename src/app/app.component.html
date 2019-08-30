@@ -24,7 +24,7 @@
                 <!-- [element]="serverElement" removed, [name]="serverElement.name" added -->
 
                 <!-- This is passed into the server-element component using <ng-content> in the server-element component -->
-                <p>
+                <p #contentParagraph>
                     <strong
                         *ngIf="serverElement.type === 'server'"
                         style="color: red"
