@@ -16,7 +16,8 @@ export class GameControlComponent implements OnInit {
 
     setTheInterval() {
         this.theInterval = setInterval(() => {
-            this.onGameStarted();
+            this.gameStarted.emit();
+            console.log('--gameStarted emit.');
         }, 1000);
         console.log('--setTheInterval called.');
     }
@@ -24,11 +25,6 @@ export class GameControlComponent implements OnInit {
     myStopFunction() {
         clearInterval(this.theInterval);
         console.log('--myStopFunction called.');
-    }
-
-    onGameStarted() {
-        this.gameStarted.emit();
-        console.log('--gameStarted emit.');
     }
 
     onGameStopped() {
