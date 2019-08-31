@@ -10,6 +10,7 @@ export class AppComponent {
         { type: 'server', name: 'Testserver', content: 'Just a test!' },
     ];
     theNumber = 0;
+    theNumberArray = [];
 
     onServerAdded(serverData: { serverName: string; serverContent: string }) {
         this.serverElements.push({
@@ -42,6 +43,7 @@ export class AppComponent {
 
     startGame() {
         console.log('startGame() called.');
+        this.theNumberArray.push(this.theNumber);
         this.theNumber += 1;
         console.log(this.theNumber);
     }

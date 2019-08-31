@@ -43,5 +43,13 @@
             (gameStarted)="startGame($event)"
             (gameStopped)="stopGame($event)"
         ></app-game-control>
+        <div *ngFor="let item of theNumberArray; let i = index">
+            <ng-container *ngIf="i % 2 == 0; else odd">
+                <app-even [theNum]="item"></app-even>
+            </ng-container>
+            <ng-template #odd>
+                <app-odd [theNum]="item"></app-odd>
+            </ng-template>
+        </div>
     </div>
 </div>
