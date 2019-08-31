@@ -9,6 +9,7 @@ export class AppComponent {
     serverElements = [
         { type: 'server', name: 'Testserver', content: 'Just a test!' },
     ];
+    theNumber = 0;
 
     onServerAdded(serverData: { serverName: string; serverContent: string }) {
         this.serverElements.push({
@@ -35,5 +36,16 @@ export class AppComponent {
 
     onDestroyFirst() {
         this.serverElements.splice(0, 1);
+    }
+
+    // Game Control
+
+    startGame() {
+        console.log('startGame() called.');
+        this.theNumber += 1;
+        console.log(this.theNumber);
+    }
+    stopGame() {
+        console.log('stopGame() called.');
     }
 }

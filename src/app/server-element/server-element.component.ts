@@ -38,7 +38,7 @@ export class ServerElementComponent
     @ContentChild('contentParagraph', { static: true }) paragraph: ElementRef;
 
     constructor() {
-        console.log('Constructor Called!');
+        // console.log('Constructor Called!');
     }
 
     // 'Lifecycle'
@@ -51,61 +51,61 @@ export class ServerElementComponent
     // 'ngAfterViewChecked' - Called every time the view (and child views) have been checked
 
     ngOnChanges(changes: SimpleChanges) {
-        console.log('ngOnChanges Called!');
+        // console.log('ngOnChanges Called!');
         console.log(changes);
         // Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
         // Add '${implements OnChanges}' to the class.
     }
 
     ngOnInit() {
-        console.log('ngOnInit Called!');
-        console.log('Text Content: ' + this.header.nativeElement.textContent);
-        console.log(
-            'Text Content of Paragraph: ' +
-                this.paragraph.nativeElement.textContent,
-        );
+        // console.log('ngOnInit Called!');
+        // console.log('Text Content: ' + this.header.nativeElement.textContent);
+        // console.log(
+        //     'Text Content of Paragraph: ' +
+        //         this.paragraph.nativeElement.textContent,
+        // );
         // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
         // Add 'implements OnInit' to the class.
     }
 
     ngDoCheck() {
-        console.log('ngDoCheck Called!');
+        // console.log('ngDoCheck Called!');
         // Called every time that the input properties of a component or a directive are checked.
         // Use it to extend change detection by performing a custom check.
         // Add 'implements DoCheck' to the class.
     }
 
     ngAfterContentInit() {
-        console.log('ngAfterContentInit Called!');
-        console.log(
-            'Text Content of Paragraph: ' +
-                this.paragraph.nativeElement.textContent,
-        );
+        // console.log('ngAfterContentInit Called!');
+        // console.log(
+        //     'Text Content of Paragraph: ' +
+        //         this.paragraph.nativeElement.textContent,
+        // );
         // Called after ngOnInit when the component's or directive's content has been initialized.
         // Add 'implements AfterContentInit' to the class.
     }
 
     ngAfterContentChecked() {
-        console.log('ngAfterContentChecked Called!');
+        // console.log('ngAfterContentChecked Called!');
         // Called after every check of the component's or directive's content.
         // Add 'implements AfterContentChecked' to the class.
     }
 
     ngAfterViewInit() {
-        console.log('ngAfterViewInit Called!');
-        console.log('Text Content: ' + this.header.nativeElement.textContent);
+        // console.log('ngAfterViewInit Called!');
+        // console.log('Text Content: ' + this.header.nativeElement.textContent);
         // Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
         // Add 'implements AfterViewInit' to the class.
     }
 
     ngAfterViewChecked() {
-        console.log('ngAfterViewChecked Called!');
+        // console.log('ngAfterViewChecked Called!');
         // Called after every check of the component's view. Applies to components only.
         // Add 'implements AfterViewChecked' to the class.
     }
 
     ngOnDestroy(): void {
-        console.log('ngOnDestroy Called!');
+        // console.log('ngOnDestroy Called!');
         // Called once, before the instance is destroyed.
         // Add 'implements OnDestroy' to the class.
     }

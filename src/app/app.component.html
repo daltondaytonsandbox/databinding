@@ -15,7 +15,7 @@
                 Destroy first component
             </button>
 
-            <!-- '[element]' Binding to customer properties.  -->
+            <!-- '[element]' Binding to custom properties.  -->
             <!-- server-element.ts is using '@Input' to bind [element] -->
             <app-server-element
                 *ngFor="let serverElement of serverElements"
@@ -36,5 +36,12 @@
                 </p>
             </app-server-element>
         </div>
+    </div>
+    <hr />
+    <div class="row">
+        <app-game-control
+            (gameStarted)="startGame($event)"
+            (gameStopped)="stopGame($event)"
+        ></app-game-control>
     </div>
 </div>
